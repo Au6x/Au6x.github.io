@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+RayTheAnalyst
+     
+    </title>
+
+
+
+    <style>
+        *{
+            padding:0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: #fff;
+           }
+
+           .lnk{
+            font-size: small;
+            background:linear-gradient(to right,rgb(24, 128, 102, 0.705) 0%,rgba(34, 0, 128) 100%);
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+           }
+
+           body{
+            height: 100%;
+           background:linear-gradient(to bottom,rgb(4, 1, 10) 0%,rgb(21, 19, 24) 100%);
+       
+           margin: 0%;
+           padding: 0%;
+           width: 90%;
+             }
+
+             .cc{
+                animation: transition 2s;
+             }
+
+
+
+             @keyframes transition {
+                from{
+                    
+                    opacity: 0;
+                }
+                to{
+                  
+                    opacity: 1;
+                }
+                
+             }
+           
+           .head{
+            width: 100vw;
+            display:flex;
+            justify-content: space-between;
+            padding: 30px;
+            align-items: center;
+            position: fixed;
+            background-color: rgb(4, 1, 10);
+            z-index: 100;
+          
+        
+           }
+
+           ul{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            
+            font-size: medium;
+            font-weight: 10;
+            color: green;
+           
+            
+           }
+
+           .home{
+           
+            height: 100vh;
+            
+            margin:0 1px;
+           }
+           .about{
+            
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: left;
+            justify-content: center;
+            margin:0 1px;
+           } 
+           .portfolio{
+           
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: left;
+            justify-content: center;
+            margin:0 1px;
+           }
+
+           ul li{
+            list-style: none;
+            background:linear-gradient(to left,rgb(24, 128, 102, 0.705) 0%,rgb(0, 89, 255, 0.384) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-background-clip: text;
+            -moz-text-fill-color: transparent;
+           
+            
+            
+           }
+
+           li{
+            padding: 5px;
+            list-style: none;
+            text-underline-position: above;
+            
+            
+           }
+
+           .R{
+            background:rgba(0, 89, 255, 0.384); 
+            width: 30px;
+            height: 30px;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            box-shadow: -4px -4px rgba(26, 32, 31, 0.705);
+            animation: anim 4s infinite;
+           }
+
+           .intro{
+            position: relative;
+            right: -5%;
+
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            text-shadow: 10px;
+            height: 100vh;
+        
+            width: 100%;
+            
+           
+            
+           }
+
+           
+
+
+
+
+      
+
+           .R .logo{
+            background:linear-gradient(to left,rgba(255, 255, 255, 0.705) 0%,rgba(26, 255, 205, 0.384) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-background-clip: text;
+            -moz-text-fill-color: transparent;
+        
+           
+           
+           }
+
+           .intro p{
+            
+            padding: 5px;
+            font-size: large;
+            font-weight: 10;
+            background:linear-gradient(to left,rgb(24, 128, 102, 0.705) 0%,rgb(0, 89, 255, 0.384) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-background-clip: text;
+            -moz-text-fill-color: transparent;
+           
+           }
+
+           .about p{
+            padding: 1px;
+            color: #fff;
+
+            
+           }
+
+           .portfolio p{
+            padding: 1px;
+            color: #fff;
+            
+            
+           }
+
+          
+
+           .intro p i{
+            font-size: small;
+            background:linear-gradient(to left,rgba(128, 53, 24, 0.705) 0%,rgba(0, 255, 34, 0.384) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;  
+            -moz-background-clip: text;
+            -moz-text-fill-color: transparent;             
+           }
+
+           .about-cont{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
+            align-items: right;
+            height: 65vh;
+            width: 40vw;
+            font-weight: lighter;
+          
+            left: 5%;
+           }
+
+           .port-cont{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
+            align-items: right;
+            height: 65vh;
+            width: 40vw;
+            font-weight: lighter;
+          
+            left: 5%;
+           }
+         
+           .about-cont .about-me{
+            position: absolute;
+            top: 0%;
+            padding-bottom: 20px;
+            font-style: initial;
+            font-size: xx-large;
+            font-weight: 100;
+            font-stretch: expanded;
+            width: 20vw;
+            background: yellow;
+            height:5vh;
+            background:linear-gradient(to left,rgb(24, 128, 102, 0.705) 0%,rgb(0, 89, 255, 0.384) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-background-clip: text;
+            -moz-text-fill-color: transparent;
+            text-shadow: 2px -2px rgb(44, 48, 44,);
+           }
+
+           .port-cont .port-me{
+            position: absolute;
+            top: 0%;
+            padding-bottom: 20px;
+            font-style: initial;
+            font-size: xx-large;
+            font-weight: 100;
+            font-stretch: expanded;
+            width: 12vw;
+            height:6vh;
+            background:linear-gradient(to left,rgb(24, 128, 102, 0.705) 0%,rgb(0, 89, 255, 0.384) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px -2px rgb(44, 48, 44);
+            -moz-background-clip: text;
+            -moz-text-fill-color: transparent;
+           
+            
+
+           }
+
+           #about .about-pic-cont{
+            background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("ray.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            right: 5%;
+            width: 300px;
+            height: 350px;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 15px -15px rgb(44, 48, 44);
+          
+           
+           }
+
+           
+
+           #about .about-pic-cont img{
+            background-size: cover;
+            background-attachment: fixed;
+            width: 300px;
+            height: 350px;
+
+           }
+
+           .about .about-cont .text{
+            background:linear-gradient(to bottom,rgb(254, 255, 255) 0%,rgba(5, 217, 255, 0.384) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-background-clip: text;
+            -moz-text-fill-color: transparent;
+            padding-top: 40px;
+           
+           }
+
+           .portfolio .port-cont .text{
+            background:linear-gradient(to bottom,rgb(254, 255, 255) 0%,rgba(5, 217, 255, 0.384) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-background-clip: text;
+            -moz-text-fill-color: transparent;
+            padding-top: 40px;
+           
+           }
+
+           .portfolio .port-cont .box1{
+            position: relative;
+            top :-1%;
+            padding: 10px;
+            width: 200px;
+            height: 200px;
+            box-shadow: 5px 0 rgb(34, 0, 128);
+            display: flex;
+            justify-content: space-between;
+            justify-content: center;
+            align-items: center;
+           
+            border-radius: 10px;
+            overflow: hidden;
+            background-size: cover;
+            background-position: 100%;
+            background-repeat: no-repeat;
+          
+           }
+           
+           .portfolio .port-cont .box2{
+            position: relative;
+            top :-1%;
+            padding: 10px;
+            width: 200px;
+            height: 200px;
+            box-shadow: 5px 0 rgb(34, 0, 128);
+            display: flex;
+            justify-content: space-between;
+            justify-content: center;
+            align-items: center;
+         
+            border-radius: 10px;
+           }
+           .portfolio .port-cont .box3{
+            position: relative;
+            top :-1%;
+            padding: 10px;
+            width: 200px;
+            height: 200px;
+            box-shadow: 5px 0 rgb(34, 0, 128);
+            display: flex;
+            justify-content: space-between;
+            justify-content: center;
+            align-items: center;
+          
+            border-radius: 10px;
+           }
+           .portfolio .port-cont .box4{
+            position: relative;
+            top :-1%;
+            padding: 10px;
+            width: 200px;
+            height: 200px;
+           
+            display: flex;
+            justify-content: space-between;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+          
+            border-radius: 10px;
+            box-shadow: 5px 0 rgb(34, 0, 128);
+           }
+
+           .box-cont{
+            position: relative;
+            top: 10%;
+            display:flex;
+            flex-direction: column;
+            justify-content: space-around;
+            
+            width: 88vw;
+            height: 94vh;
+            align-items: center;
+            border-radius: 10px;
+            
+           }
+
+           .details{
+            position: relative;
+            bottom: 0%;
+            display:flex;
+            justify-content: space-around;
+            
+            color: white;
+            font-size:small;
+            width: 88vw;
+            height: 20vh;
+            align-items: center;
+            border-radius: 10px;
+             
+            background:linear-gradient(to bottom,rgb(254, 255, 255) 0%,rgba(5, 217, 255, 0.384) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-background-clip: text;
+            -moz-text-fill-color: transparent;
+           }
+           .details p{
+            padding: 30px;
+           }
+
+         
+
+           .cov{
+            position: relative;
+            
+            padding: 10px;
+            width: 200px;
+            height: 140px;
+            background-color: rgb(34, 0, 128);
+            display: flex;
+            justify-content: space-between;
+            
+      
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-align: center;
+            text-align: center;
+            border-radius: 7px;
+            opacity: .9;
+
+           
+            
+            
+           }
+
+           .cov p{
+            font-size: small;
+            text-align: center;
+           }
+
+           .cov h2{
+            text-align: center;
+           }
+
+           .box-text1,.box-text2,.box-text3,.box-text4{
+            position: relative;
+            text-align: center;
+            box-align: center;
+            
+          
+            
+           }
+
+           .box1 .box-text1{
+            color: rgb(248, 248, 248);
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background: black;
+            width: 200px;
+            height: 400px;
+          
+            opacity: .5;
+            
+           }
+
+           .portfolio .port-cont .box1{
+            background-image: url('analysis.png');
+            background-size: contain;
+           }
+           .portfolio .port-cont .box2{
+            background-image: url('data-science.png');
+            background-size: contain;
+           }
+           .portfolio .port-cont .box3{
+            background-image: url('database.png');
+            background-size: contain;
+           }
+           .portfolio .port-cont .box4{
+            background-image: url('excel.png');
+            background-size: contain;
+           }
+
+           .boxx{
+          
+            position: relative;
+            top: 12%;
+            width: 90vw;
+            display: flex;
+            justify-content: space-between;
+           
+           
+           }
+
+           .cov h2{
+            background:linear-gradient(to bottom,rgb(254, 255, 255) 0%,rgba(5, 217, 255, 0.384) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-background-clip: text;
+            -moz-text-fill-color: transparent;
+            padding-top: 40px;
+            position: relative;
+            top:0;
+            padding-bottom: 10px;
+           
+           }
+
+           .dt1{
+           
+            width: 25%;
+           }
+           .dt2{
+      
+            width: 25%;
+           }
+      
+           .dt3{
+          
+            width: 25%;
+           }
+           .dt4{
+       
+            width: 25%;
+           }
+
+           .dt1,.dt2,.dt3,.dt4{
+            height:100px;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+           }
+
+           .f{
+            position: relative;
+            top :-1%;
+            padding: 0 10px;
+            width: 200px;
+            height: 320px;
+            box-shadow: 5px 0 rgb(34, 0, 128);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            justify-content: center;
+            align-items: center;
+         
+            border-radius: 10px;
+            overflow: hidden;
+            background-size: cover;
+            background-position: 100%;
+           
+     
+            
+
+           }
+
+           .box1{
+            display: flex;
+            flex-direction: column;
+           }
+
+           .f .xx{
+            
+            font-size: small;
+           }
+
+           .xx{
+            
+            width: 200px;
+            height: 100px;
+            background:linear-gradient(to left,rgb(24, 128, 102, 0.705) 0%,rgb(0, 89, 255, 0.384) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-background-clip: text;
+            -moz-text-fill-color: transparent;
+           
+           }
+
+           .about .about-pic-cont{
+            
+            background-size: contain;
+          
+           
+
+           }
+
+           .home .head .list ul li a{
+            list-style: none;
+            text-decoration: none;
+          
+           }
+
+           .R a{
+            list-style: none;
+            text-decoration: none;
+          
+
+           }
+
+          
+           
+           
+      
+        @media screen and (min-width:300px) and (max-width:760px){
+
+            body{
+          
+           }
+        
+           
+           .head{
+            width: 100vw;
+            display:flex;
+            justify-content: space-between;
+            padding: 30px;
+            align-items: center;
+            position: fixed;
+            background-color: rgb(4, 1, 10);
+            z-index: 100000;
+          
+        
+           }
+
+           ul{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            
+            font-size: medium;
+            font-weight: 10;
+            color: green;
+           
+            
+           }
+
+           .home{
+           
+            height: 100vh;
+            margin:0 1px;
+           
+         
+           }
+           .about{
+            
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: left;
+            justify-content: center;
+            margin:0 1px;
+          
+      
+           } 
+
+           .boxx{
+          
+          position: relative;
+          top: 0%;
+          width: 90vw;
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          align-items: center;
+      
+
+          justify-content: center;
+          
+         
+         
+         }
+           .portfolio{
+           
+            height: 200vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: left;
+            justify-content: center;
+            margin:0 1px;
+         
+           
+           }
+
+           .port-cont .port-me{
+            position: absolute;
+            top: -85%;
+            padding-bottom: 20px;
+            font-style: initial;
+            font-size: xx-large;
+            font-weight: 100;
+        
+            width: 100%;
+            height:6vh;
+            list-style: none;
+            background:linear-gradient(to left,rgb(24, 128, 102, 0.705) 0%,rgb(0, 89, 255, 0.384) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-background-clip: text;
+            -moz-text-fill-color: transparent;
+           
+             z-index: 10;
+            text-shadow: 2px -2px rgb(44, 48, 44);
+           
+           }
+
+            #about .about-pic-cont{
+            background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("ray.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            right: -2%;
+            top: 26%;
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 15px -15px rgb(44, 48, 44);
+          
+           
+           }
+
+           
+
+           #about .about-pic-cont img{
+            background-size: cover;
+            background-attachment: fixed;
+            width: 150px;
+            height: 150px;
+
+           }
+
+           .about .about-cont .text{
+            position: relative;
+           background:linear-gradient(to bottom,rgb(254, 255, 255) 0%,rgba(5, 217, 255, 0.384) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-background-clip: text;
+            -moz-text-fill-color: transparent;
+            padding-top: 40px;
+      
+            width: 100%;
+           
+           }
+
+           .about-cont .about-me{
+            position: relative;
+            top: -60%;
+            padding-bottom: 20px;
+            font-style: initial;
+            font-size: xx-large;
+            font-weight: 100;
+            font-stretch: expanded;
+            width: 80%;
+            height:8vh;
+          
+            
+          
+            background:linear-gradient(to left,rgb(24, 128, 102, 0.705) 0%,rgb(0, 89, 255, 0.384) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px -2px rgb(44, 48, 44,);
+            -moz-background-clip: text;
+            -moz-text-fill-color: transparent;
+           }
+
+           .about{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+           
+           }
+           .about-cont{
+        
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            top:10%;
+            right: -30%;
+            font-size: xx-small;
+            width: 100%;
+           }
+
+           .about .about-cont .text{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            bottom: 0%;
+            
+           }
+           .about .about-cont .text p{
+            padding: 4px;
+            
+           }
+          
+
+
+     
+        }
+
+        footer {
+            position: relative;
+            left: 5%;
+  text-align: center;
+  padding: 3px;
+  width:100%;
+  background-color: rgb(20, 22, 27);
+  color: white;
+  text-decoration: none;
+
+}
+a {
+  text-decoration: none;
+}
+
+
+
+
+    </style>
+    <link rel="icon" href="letter-r.png">
+    <script src="https://use.fontawesome.com/35be55a773.js"></script>
+</head>
+<body>
+    <section class="home cc" id="home">
+        <div class="head">
+            <div class="R"> <p class="logo">
+                <a href="#portfolio">R</a>
+
+                </p> </div>
+            <div class="list">
+           
+            <p>
+                <ul>
+                    <li>
+                        <a href="#home">Home</a>
+                    
+                    </li>
+                    <li>
+                        <a href="#portfolio">Portfolio</a>
+                    </li>
+                    <li>
+                      <a href="#about">About</a>
+                    </li>
+                    
+                    <li>
+                       <a href="https://mail.google.com/mail/u/0/?ogbl#inbox?compose=CllgCHrdlQxJJVjtPsNMcfplRPcqFWWbWxwXxHNhPKXkQRwbnbWwJhlhhMSLrkGGSKWkQfkDtnV">Contact</a>
+                    </li>
+                    
+                </ul>
+            </p>
+        </div>
+        </div>
+<div class="intro">
+    <p>Raymond Sekgobela</p>
+    <p>Data Scientist | Machine Learning Engineer</p>
+    <p><i>"Optimize your Data Usage.."</i></p>
+</div>
+    </section>
+
+    <section class="portfolio cc" id="portfolio">
+   
+    <div class="port-cont">
+      
+            <h2 class="port-me">Portfolio</h2>
+            <div class="box-cont">
+<div class="boxx">
+    <div class="f">
+<div class="box1">
+    
+    <div class="cov">
+       
+        <h2>Python</h2>
+<p>Exploratory Data Analysis</p>
+    </div>
+
+</div>
+<div>
+    <p class="xx">Through the use of Python and its useful Data Science libraries like pandas,I'm able to efficiently analyze,spot trends and make high quality recommendations.<p class="lnk"><a href="https://jovian.ai/au6x/movie-analysis" target="_blank">example</a></p>
+   </div>
+</div>
+<div class="f">
+<div class="box2">
+    
+    <div class="cov">
+        <h2>Dashboard</h2>
+<p>Important KPIs</p>
+    </div>
+</div>
+<div>
+    <p class="xx">I use high quality visualization tools like Tableau and PowerBI for my data visuals.<p class="lnk"><a href="">example</a></p></p>
+   </div>
+</div>
+<div class="f">
+<div class="box3">
+   
+    <div class="cov">
+        <h2>SQL</h2>
+<p>Big Data</p>
+    </div>
+</div>
+<div>
+    <p class="xx">Ability to collect, organize, analyze, and disseminate large datasets with attention to detail and accuracy using SQL.<p class="lnk"><a href="https://github.com/Au6x/SQL-Data-Cleaning/blob/main/SQL%20Data%20Cleaning.sql" target='_blank'>example</a></p></p>
+   </div>
+</div>
+<div class="f">
+<div class="box4">
+
+    <div class="cov">
+        <h2>Excel</h2>
+<p>Small Data</p>
+    </div>
+    
+</div>
+<div>
+    <p class="xx">Experienced in interpreting and analyzing data with great attention to detail to drive growth using Excel.<p class="lnk"><a href="https://1drv.ms/b/s!AnfvZ9jAL_aygRKd1UTEjnMahkOI?e=sRjVgr" target="_blank">example</a></p></p>
+   </div>
+</div>
+</div>
+
+</div>
+</div>
+
+    </section>
+
+<section class="about cc" id="about">
+
+    <div class="about-pic-cont">
+    
+    </div>
+   
+    <div class="about-cont">
+      
+            <h2 class="about-me">About Me</h2>
+       <div class="text">
+    <p>
+        Hi, I'm Raymond, I work professionally as a Data Scientist.</p><br><p>I studied at the University of the Witwatersrand in Johannesburg,South Africa.
+        </p><br><p>I'm a certified SQL and Python for Data Science Developer,certified by Jovian Academy Of Data Science.
+    </p><br><p>
+        I have over 2 years experience working as a Data Analyst for various companies as a freelancer.
+        I have sufficient experience working with Python,SQL,Power BI and Excel.
+        I have recently entered the world of a full Data Scientist with just over 1 year experience being able to collect,clean,analyze,process and build highly useful predictive models through the use of Python.
+
+    </p><br>
+    <p>
+        Working as part of a team has made me aware of the importance of writing clean, efficient and highly readable code,which is what I specialize in. 
+    </p>
+</div>
+</div>
+
+
+
+</section>
+<section class="foot">
+<footer>
+    <p>&copy; Raymond Sekgobela 2022<br>
+  </footer>
+</section>
+</body>
+</html>
